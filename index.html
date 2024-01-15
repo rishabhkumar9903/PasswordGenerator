@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Password-Generator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>password generator</h1>
+        <!--Big Container of Fixed Length and Height-->
+        <div class="container">
+         <!--PassWord Output Screen --Display-->
+         <div class="psd-display">
+          <input class="psd-input" type="text" placeholder="Password" psd-output readonly></input>
+          <span class="copy-container">
+            <text class="text-copy" copy-text>Copied</text>
+            <img class="copy_button" src="./assets/copy.svg" width="20" height="20" data-copy>
+          </span>
+          
+         </div>
+
+        <div class="small-box">
+        <div class="psd-length-container">
+            <label for="psd-length">Password Length</label>
+            <text class="psd-length-text" psd-length>0</text>
+            <div class="range-container">
+                <input class="slider" name="psd-length" id="psd-length" type="range" min="0" max="20" psd-range >
+            </div>
+            
+        </div>
+
+        <!---Checkboxes-->
+        <div class="allCheckBoxContainer">
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes lowercase letters</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes Symbol</label>
+            </div>
+        </div>
+
+        <!--Strength Container-->
+        
+        <div class="strength-container">
+            <p>Strength</p>
+            <div class="light" strength-indicator></div>
+        </div>
+
+        <div class="submit-btn-container">
+            <button id="submit-password" type="submit" generate-password>Generate Password</button>
+        </div>
+
+        </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
