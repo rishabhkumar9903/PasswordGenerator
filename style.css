@@ -1,0 +1,281 @@
+*, 
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+
+}
+
+:root {
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+
+
+.copy-container{
+    position: relative;
+    width:auto;
+    height: 25px;
+}
+
+.text-copy{
+    opacity: 0;
+    position:absolute;
+    bottom: 18px;
+    background-color: yellow;
+    color:red;
+}
+
+.active{
+    opacity: 1;
+}
+
+
+.light{
+    background-color: grey;
+    width:28px;
+    height:28px;
+    border-radius: 50%;
+}
+
+
+/*the above code is used in the javascript code to decide the functionality of the app it has no role with the styling of the uI
+*/
+
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgba(52, 28, 79, 1) 50%, rgba(88, 7, 125, 1) 100%);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container{
+    margin-top: 15px;
+    width:350px;
+    height:650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.psd-display{
+    width:100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dk-violet);
+    border-radius: 8px;
+    border-bottom: 4px solid var(--vb-cyan);
+}
+
+.psd-input{
+
+    all:unset;
+    padding: 10px;
+    color:var(--vb-yellow);
+    background-color: var(--dk-violet);
+
+
+}
+
+.copy_button{
+    margin-right: 8px;
+}
+
+.small-box{
+    width:100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap:22px;
+    background-color: var(--dk-violet);
+    align-items: center;
+    border-radius: 10px;
+}
+
+.psd-length-container{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width:100%;
+    height:60px;
+    margin-top:22px;
+}
+
+.range-container{
+    width:100%;
+    position:absolute;
+    top:40px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider{
+    appearance: none;
+    width:70%;
+    height: 0.75rem;
+    background-color: var(--lt-violet);
+    background-image: linear-gradient(var(--vb-violet),var(--vb-violet));
+    cursor:pointer;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    border:none;
+    outline:none;
+    
+}
+
+
+.slider:focus{
+    outline: 3px solid var(--vb-yellow);
+    
+}
+
+
+.allCheckBoxContainer{
+    width:76%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:8px;
+}
+
+.checkbox-container{
+    display: flex;
+    gap:10px;
+}
+
+.checkbox-container input{
+    all:unset;
+    width:18px;
+    height: 15px;
+    border: 1px solid var(--vb-cyan2);
+    border-radius: 5px;
+    position: relative;
+}
+
+.checkbox-container input:checked{
+    background-color: var(--vb-cyan2);
+}
+
+.checkbox-container input:checked::before{
+    content:'✔';
+    position: absolute;
+    bottom: 0.5px;
+    left:2px;
+    color:var(--dk-violet);
+    font-weight: bold;
+}
+
+.strength-container{
+    width:76%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.submit-btn-container{
+
+    width:76%;
+}
+
+.submit-btn-container button{
+    width: 100%;
+    padding:15px;
+    color:var(--vb-yellow);
+    background-color: var(--vb-violet);
+    border-radius: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--vb-yellow);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.slider::-moz-range-thumb {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--vb-yellow);
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    cursor: pointer;
+  }
+
+  .slider:focus{
+    z-index: 1;
+    outline:3px solid var(--vb-yellow);
+  }
+
+  
+  .slider::-moz-range-thumb:hover {
+    position: relative;
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+    position: absolute;
+  } 
+
+  .slider::-moz-range-thumb:focus{
+    position:absolute;
+    background-color: violet;
+    z-index: 2;
+
+  }
+
+
+
+
+
+  /*
+  
+  
+.slider::-webkit-slider-thumb {
+    position:relative;
+    z-index:1;
+    appearance: none;
+    height:4rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: var(--vb-yellow);
+    cursor:pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+    
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+    
+}
+
+  */
